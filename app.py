@@ -6,7 +6,7 @@ import pandas as pd
 # Load the trained model pipeline
 # Make sure the 'LogisticRegression_churn_model.pkl' file is available in the environment where you run the streamlit app
 try:
-    loaded_pipeline = joblib.load('/content/best_rf_model.joblib')
+    loaded_pipeline = joblib.load('best_rf_model.joblib')
 except FileNotFoundError:
     st.error("Model file model not found. Please ensure it's in the same directory.")
     st.stop() # Stop the app execution if model is not found
